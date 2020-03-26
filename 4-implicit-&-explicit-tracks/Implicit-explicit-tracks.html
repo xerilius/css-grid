@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>CSS Grid Fundamentals</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+
+    </div>
+
+    <style>
+        .container {
+            display: grid;
+            grid-gap: 20px;
+            /* explicitly defined what the columns will be */
+            grid-template-columns: 200px 400px;
+            /* if have not defined what the rows will be ==> implicit (dotted lines) */
+            grid-template-rows: 200px 400px;
+
+            /* grid-auto-rows for IMPLICITLY created rows */
+            grid-auto-rows: 500px 100px;
+
+            /* grid-auto-columns: 100px;  ???????????  */
+
+        }
+    </style>
+</body>
+</html>

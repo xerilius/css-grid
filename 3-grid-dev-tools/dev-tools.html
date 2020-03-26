@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>CSS Grid Fundamentals</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+    </div>
+    <!-- /* Dev tools */
+    /*  turn on line numbers & area names & extend lines infinitely*/ -->
+    <!-- colums & rows are called tracks, numbered by the lines that start & stop them, so will always have 1 more number of column or row -->
+    <style>
+        /* SOLID LINES => start & stop of explicit grid */
+        /* DASH diagonal lines ==> the gap */
+        /* Dark long Dash lines => explicit track -actual column */
+        /* dotted dash lines => implicit -- created without us saying so (browser created them) */
+
+ 
+        .container {
+            display: grid;
+            grid-template-columns: 100px 200px;
+            grid-gap: 20px;
+        }
+    </style>
+</body>
+</html>

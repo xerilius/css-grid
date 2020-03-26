@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>CSS Grid Fundamentals</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- .item.item${$}*20 -->
+        <div class="item item1">Sidebar #1</div>
+        <div class="item item2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+        <div class="item item3">Sidebar #2</div>
+        <div class="item footer">Footer</div>
+
+    </div>
+
+    <style>
+        .container {
+            display:grid;
+            grid-gap:20px;
+            grid-template-columns: 1fr 10fr 1fr;
+            grid-template-rows: 150px 150px 100px;
+
+        /* naming areas of the grid for each ROW*/
+            grid-template-areas:
+            "sidebar-1   content     sidebar-2"
+            "sidebar-1   content     sidebar-2"
+            "footer       footer      footer"
+           /* . ==> for dead space */
+        }
+
+        .footer {
+            /* grid-area puts items in that area automatically */
+            grid-area: footer;
+            /* syntax:
+             grid-area: name-of-area; */
+        }
+
+        .item1 {
+            grid-area: sidebar-1;
+        }
+
+        .item2 {
+            grid-area: content;
+        }
+
+        .item3 {
+            grid-area: sidebar-2;
+        }
+
+        /* redefine template areas with media queries */
+        @media(max-width:700px) {
+            .container {
+                grid-template-areas:
+                    "content    content    content"
+                    "sidebar-1   sidebar-1  sidebar-2"
+                    "footer       footer      footer"
+            }
+        }
+
+    </style>
+</body>
+</html>

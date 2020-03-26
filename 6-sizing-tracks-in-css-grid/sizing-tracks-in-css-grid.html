@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>CSS Grid Fundamentals</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">REEEEEEEEEE</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+    </div>
+
+    <style>
+        .container {
+            display: grid;
+            grid-gap: 20px;
+            height: 500px;
+            border: 10px solid var(--yellow);
+            
+            /* grid-template-columns: 50% 1fr 1fr 1fr; */
+
+            /* auto keyword - adjusts to max size of content defining the width of the auto column  */
+            grid-template-columns: auto 1fr auto 1fr;
+
+            /* default width of grid = viewport */
+            /* default height element of grid == height of the content */
+            /* grid-template-rows: 1fr 1fr 10fr 1fr; */
+            /* grid-template-columns: 200px 200px 1fr; 
+            
+            dont use => %, USE => fr 
+             grid-templates-columns: % % will give you horizontal scroll 
+             %s will not add up correctly
+           
+             fraction unit - fr ==> takes up the free space*/
+        }
+    </style>
+</body>
+</html>
